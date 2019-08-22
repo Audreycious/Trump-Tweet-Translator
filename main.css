@@ -51,6 +51,11 @@ section {
     border: 1px solid black;
     justify-content: center;
 }
+
+/* .translate-container {
+
+} */
+
 footer {
     position: fixed;
     bottom: 0;
