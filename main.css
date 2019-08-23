@@ -25,32 +25,35 @@ main {
 }
 
 main {
-    justify-content: center;
-    padding: 0 8vw;
+    justify-content: flex-start;
+    padding: 0 8vw 10vh;
     background-image:
         radial-gradient(white 0%, dodgerblue 100%);
 }
 
 .image-container {
-    min-width: 70vw;
+    width: 80%;
+    max-width: 600px;
     height: 30%;
+    min-height: 25vmin;
     text-align: center;
     background: url('Trump-Twitter-header.jpg');
-    background-size: auto 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 4% 0;
+    margin: 2vh 0;
     border-radius: 15px;
 }
 
 .top-button, .bottom-button {
-    height: 6vh;
+    height: 6vmin;
     width: 100%;
     border-radius: 15px;
     border: 1px solid black;
     background: rgba(244, 244, 244, 0.4);
-    font-size: 6vmin;
+    font-size: 4vmin;
     cursor: pointer;
+    padding: 0;
 }
 
 .top-button {
@@ -58,16 +61,16 @@ main {
 }
 
 .bottom-button {
-    margin: 0 0 3% 0;
+    margin: 0 0 2vh 0;
 }
 
 select {
-    margin: 3% auto 2px;
+    margin: 2vh auto .3vh;
     width: 90%;
     max-width: 80vw;
     border-radius: 7px;
     border: 1px solid black;
-    font-size: 5vmin;
+    font-size: 3.5vmin;
     font-weight: 450;
     background: rgba(28, 161, 243, 0.2);
     color: white;
@@ -81,7 +84,6 @@ option {
 }
 
 section {
-    height: 60vh;
     text-align: center;
     margin: 0;
 }
@@ -95,9 +97,9 @@ section {
 }
 
 #home-page p {
-    margin: 3% 1% 0;
+    margin: 2vh 1% 0;
     text-align: start;
-    font-size: 4.7vmin;
+    font-size: 2.7vh;
     font-weight: 450;
 }
 
@@ -108,15 +110,15 @@ section {
 }
 
 #tweet-button {
-    margin: 0 0 3% 0;
+    margin: 0 0 2vh 0;
 }
 
 .tweet-display {
     text-align: center;
-    height: 18vh;
+    height: 18vmin;
     border: 1px solid black;
     justify-content: center;
-    padding: 2%;
+    padding: 1%;
     border-radius: 15px;
     font-size: 4.5vmin;
 }
@@ -124,11 +126,11 @@ section {
 footer {
     position: fixed;
     bottom: 0;
-    height: 5vmax;
+    height: 8vmin;
     width: 100%;
     justify-content: space-around;
-    padding: 1% 1% 2%;
-    font-size: 5vmin;
+    padding: .4% 1%;
+    font-size: 4.5vmin;
     color: white;
     white-space: nowrap;
     border-top: 1.5px solid white;
@@ -144,12 +146,12 @@ a:link, a:visited {
 }
 
 :focus {
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 @media only screen and (min-width: 420px) {
     #home-page p {
-        font-size: 4vmin;
+        font-size: 3.2vmin;
     }
 
     footer {
@@ -157,8 +159,8 @@ a:link, a:visited {
     }
 
     .tweet-display {
-        font-size: 3vmin;
-        max-height: 20vmin;
+        font-size: 4vmin;
+        /* max-height: 20vmin; */
     }
 
     .top-button, .bottom-button {
@@ -167,16 +169,16 @@ a:link, a:visited {
 }
 
 @media only screen and (min-width: 720px) {
-    section {
+    /* section {
         max-height: 60vmax;
         max-width: 70vw;
         margin: 0 0 7vmax 0;
-    }
+    } */
 
-    .image-container {
+    /* .image-container {
         max-width: 70vw;
         margin: 2vh 0 4vh 0;
-    }
+    } */
 
     .tweet-display {
         font-size: 3vmin;
@@ -212,13 +214,11 @@ a:link, a:visited {
     }
 
     section {
-        width: 70vw;
         max-width: 1000px;
-        max-height: 50vmin;
     }
 
     .tweet-display {
-        max-height: 11vmin;
+        /* max-height: 11vmin; */
         font-size: 3vmin;
     }
 
