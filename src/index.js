@@ -35,6 +35,7 @@ $(document).ready(function () {
             });
     }
 
+    // Translate tweets
     function translateTweet() {
         const translateBaseUrl = STORE.translateBaseUrl;
 
