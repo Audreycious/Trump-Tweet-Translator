@@ -7,33 +7,61 @@
         <meta name="description" content="Translate random trump tweets into another language!n">
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
         <link rel="stylesheet" type="text/css" href="/main.css">
-        <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
+        <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
         <title>Trump Tweet Translator</title>
     </head>
     <body>
         <main class="col">
-            <div class="image-container">img</div>
-            <button id="start-button" class="top-button">Start app button</button>
-            <!-- <button id="tweet-button" class="top-button">Get tweet button</button> -->
-            <section class="col">
-                <!-- Explanation of the app and how it works -->
-                <div class="tweet-display col">Trump Tweet</div>
+            <div class="image-container"></div>
+            <section id="home-page" class="col ">
+                <button id="start-button" class="top-button">Start the App!</button>
+                <p>The <strong>Trump Tweet Translator</strong> is a public-use app to translate real tweets made by Donald Trump. <br /><br />
+                First, start the app; then, get a random tweet by clicking the "Get New Tweet" button. Then, select the language you would like to translate the tweet into the first time around and press the "Translate!" button. <br /><br />
+                After the language you picked, the tweet will be translated into Chinese, then back to English for your viewing pleasure! Hope you enjoy!</p>
+            </section>
+            <section id="tweet-page" class="col hidden">
+                <button id="tweet-button" class="top-button">Get New Tweet</button>
+
+                <div id="trump-tweet-container" class="tweet-display col"></div>
                 <div class="translate-container col">
-                    <button class="bottom-button">Translate Button</button>
                     <select>
-                        <option value="spanish">Spanish</option>
-                        <option value="german">German</option>
-                        <option value="japanese">Japanese</option>
-                        <option value="chinese">Chinese</option>
+                        <option value="AR">Arabic</option>
+                        <option value="KM">Cambodian</option>
+                        <option value="DA">Danish</option>
+                        <option value="NL">Dutch</option>
+                        <option value="FR">French</option>
+                        <option value="DE">German</option>
+                        <option value="EL">Greek</option>
+                        <option value="HI">Hindi</option>
+                        <option value="HU">Hungarian</option>
+                        <option value="IS">Icelandic</option>
+                        <option value="GA">Irish</option>
+                        <option value="IT">Italian</option>
+                        <option value="JA">Japanese</option>
+                        <option value="KO">Korean</option>
+                        <option value="LA">Latin</option>
+                        <option value="MN">Mongolian</option>
+                        <option value="NO">Norwegian</option>
+                        <option value="PL">Polish</option>
+                        <option value="PT">Portuguese</option>
+                        <option value="RO">Romanian</option>
+                        <option value="RU">Russian</option>
+                        <option value="ES">Spanish</option>
+                        <option value="SW">Swahili</option>
+                        <option value="SV">Swedish </option>
+                        <option value="TA">Tamil</option>
+                        <option value="TH">Thai</option>
+                        <option value="BO">Tibetan</option>
+                        <option value="TR">Turkish</option>
+                        <option value="UK">Ukranian</option>
+                        <option value="VI">Vietnamese</option>
                     </select>
+                    <button id="translate-button" class="bottom-button">Translate!</button>
                 </div>
-                <div class="tweet-display col">Translated Tweet</div>
+                <div id="translated-tweet-container" class="tweet-display col"></div>
             </section>
         </main>
-        <footer>Company logo and contact info</footer>
+        <footer class="row"><a href="http://audreycious.github.io/Portfolio_v2/">Kingfisher WebDev</a><a href="https://github.com/Audreycious">GitHub</a></footer>
     </body>
     <script type="text/javascript" src="src/index.js"></script>
 </html>
