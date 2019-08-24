@@ -172,6 +172,8 @@ a:focus {
     margin-top: 1%;
 }
 
+
+
 @media only screen and (min-width: 420px) {
     #home-page p {
         font-size: 3.5vmin;
@@ -183,19 +185,6 @@ a:focus {
 }
 
 @media only screen and (min-width: 720px) {    
-    /*select {
-        font-size: 3vmin;
-    }
-
-    option {
-        font-size: 3vmin;
-    } */
-
-    /* footer {
-        padding: .5vmin 0 .5vmin;
-        font-size: 3vmin;
-    } */
-
     #home-page p {
         font-size: 3.7vmin;
     }
@@ -215,15 +204,6 @@ a:focus {
         max-width: 1000px;
     }
  
-/*
-    select {
-        font-size: 2.5vmin;
-    }
-
-    option {
-        font-size: 2vmin;
-    } */
-
     footer {
         justify-content: space-evenly;
     }
