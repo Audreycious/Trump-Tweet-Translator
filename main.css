@@ -11,10 +11,6 @@ html, body, main {
     padding: 0;
 }
 
-main {
-    align-items: center;
-}
-
 .row {
     display: flex;
 }
@@ -27,6 +23,7 @@ main {
 main {
     justify-content: flex-start;
     padding: 0 8vw 10vh;
+    align-items: center;
     background-image:
         radial-gradient(white 0%, dodgerblue 100%);
 }
@@ -35,7 +32,7 @@ main {
     width: 80%;
     max-width: 600px;
     height: 30%;
-    min-height: 25vmin;
+    min-height: 25vh;
     text-align: center;
     background: url('Trump-Twitter-header.jpg');
     background-size: 100%;
@@ -46,36 +43,37 @@ main {
 }
 
 .top-button, .bottom-button {
-    height: 6vmin;
+    height: 6vh;
     width: 100%;
     border-radius: 15px;
-    border: 1px solid black;
+    border: 5px solid white;
     background: rgba(244, 244, 244, 0.4);
-    font-size: 4vmin;
+    font-size: 4vh;
+    font-weight: 300;
     cursor: pointer;
     padding: 0;
+    color: dodgerblue;
+    margin: 0 0 1vh 0;
 }
 
-.top-button {
-    justify-self: flex-start;
-}
-
-.bottom-button {
-    margin: 0 0 2vh 0;
+.top-button, .bottom-button, select {
+    line-height: 1em;
 }
 
 select {
-    margin: 2vh auto .3vh;
-    width: 90%;
-    max-width: 80vw;
+    margin: 0 auto .3%;
+    height: 6vh;
+    width: 40%;
+    max-width: 40vw;
     border-radius: 7px;
-    border: 1px solid black;
-    font-size: 3.5vmin;
-    font-weight: 450;
-    background: rgba(28, 161, 243, 0.2);
-    color: white;
+    border: 5px solid white;
+    font-size: 3vh;
+    font-weight: 300;
+    background: rgba(28, 161, 243, 0);
+    color: dodgerblue;
     padding-left: 1%;
     cursor: pointer;
+    text-align-last: center;
 }
 
 option {
@@ -86,6 +84,7 @@ option {
 section {
     text-align: center;
     margin: 0;
+    height: 60%;
 }
 
 .hidden {
@@ -101,26 +100,25 @@ section {
     text-align: start;
     font-size: 2.7vh;
     font-weight: 450;
+    color: dodgerblue;
 }
 
 #tweet-page {
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     width: 100%;
 }
 
-#tweet-button {
-    margin: 0 0 2vh 0;
-}
-
 .tweet-display {
     text-align: center;
-    height: 18vmin;
-    border: 1px solid black;
+    height: 17vh;
+    border: 5px solid white;
     justify-content: center;
     padding: 1%;
     border-radius: 15px;
-    font-size: 4.5vmin;
+    font-size: 4.1vmin;
+    color: dodgerblue;
+    font-weight: 500;
 }
 
 footer {
@@ -138,6 +136,11 @@ footer {
 
 a {
     margin: 0 2%;
+    height: 60%;
+}
+
+a:hover {
+    transform: scale(1.2) perspective(.5px)
 }
 
 a:link, a:visited {
@@ -145,53 +148,57 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-:focus {
-    border: 2px solid black;
+select, button, a {
+    transition: all .3s ease;
+    transform: scale(1);
 }
+
+select:hover, button:hover, :focus {
+    cursor: pointer;
+    text-shadow: 0px 0px 16px dodgerblue;
+}
+
+a:focus {
+    outline: none;
+    text-shadow: 0 0 2px white, 0 0 6px white, 0 0 4px white;
+}
+
+.translate-container {
+    height: 60%;
+    margin-top: 6vh;
+}
+
+.get-tweet-container {
+    height: 40%;
+}
+
+
 
 @media only screen and (min-width: 420px) {
     #home-page p {
         font-size: 3.2vmin;
     }
 
-    footer {
-        font-size: 3.5vmin;
-    }
-
     .tweet-display {
-        font-size: 4vmin;
-        /* max-height: 20vmin; */
+        font-size: 2.4vh;
     }
 
     .top-button, .bottom-button {
-        font-size: 4vmin;
+     
     }
 }
 
 @media only screen and (min-width: 720px) {
-    /* section {
-        max-height: 60vmax;
-        max-width: 70vw;
-        margin: 0 0 7vmax 0;
-    } */
-
-    /* .image-container {
-        max-width: 70vw;
-        margin: 2vh 0 4vh 0;
-    } */
-
     .tweet-display {
         font-size: 3vmin;
     }
 
     .bottom-button, .top-button {
-        font-size: 4vmin;
+        font-size: 3vmin;
     }
 
     select {
-        height: 6vmin;
-        font-size: 3vmax;
-        max-width: 100%;
+        font-size: 3vmin;
     }
 
     option {
@@ -199,12 +206,12 @@ a:link, a:visited {
     }
 
     footer {
-        padding: .5% 0 2%;
-        font-size: 3vmax;
+        padding: .5vmin 0 .5vmin;
+        font-size: 3vmin;
     }
 
     #home-page p {
-        font-size: 3vmax;
+        font-size: 3.7vmin;
     }
 }
 

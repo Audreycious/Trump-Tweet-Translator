@@ -108,7 +108,7 @@ $(document).ready(function () {
         let translateTemp = STORE.lastTranslatedTweet2;
         let options = {
             q: translateTemp,
-            langpair: "en|" + translateLang
+            langpair: "zh|" + translateLang
         };
 
         let queryString = createQueryString(options);

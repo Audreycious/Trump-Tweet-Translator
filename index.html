@@ -17,12 +17,14 @@
                 <button id="start-button" class="top-button">Start the App!</button>
                 <p>The <strong>Trump Tweet Translator</strong> is a public-use app to translate real tweets made by Donald Trump. <br /><br />
                 First, start the app; then, get a random tweet by clicking the "Get New Tweet" button. Then, select the language you would like to translate the tweet with and press the "Translate!" button. <br /><br />
-                After translating by Yoda, the tweet will be translated into the language you chose, then back to English for your viewing pleasure! Hope you enjoy!</p>
+                After a translation by Yoda, the tweet will be translated into Chinese, then the language you chose, then back to English for your viewing pleasure! Hope you enjoy!</p>
             </section>
             <section id="tweet-page" class="col hidden">
-                <button id="tweet-button" class="top-button">Get New Tweet</button>
+                <div class="get-tweet-container">
+                    <button id="tweet-button" class="top-button">Get New Tweet</button>
 
-                <div id="trump-tweet-container" class="tweet-display col"></div>
+                    <div id="trump-tweet-container" class="tweet-display col"></div>
+                </div>
                 <div class="translate-container col">
                     <select>
                         <option value="AR">Arabic</option>
@@ -57,11 +59,11 @@
                         <option value="VI">Vietnamese</option>
                     </select>
                     <button id="translate-button" class="bottom-button">Translate!</button>
+                    <div id="translated-tweet-container" class="tweet-display col"></div>
                 </div>
-                <div id="translated-tweet-container" class="tweet-display col"></div>
             </section>
         </main>
-        <footer class="row"><a href="http://audreycious.github.io/Portfolio_v2/">Kingfisher WebDev</a><a href="https://github.com/Audreycious">GitHub</a></footer>
+        <footer class="row"><a target="_blank" href="http://audreycious.github.io/Portfolio_v2/">Kingfisher WebDev</a><a target="_blank" href="https://github.com/Audreycious">GitHub</a></footer>
     </body>
     <script type="text/javascript" src="src/index.js"></script>
 </html>
