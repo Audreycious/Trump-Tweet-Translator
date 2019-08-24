@@ -49,7 +49,7 @@ $(document).ready(function () {
         let options = {
             text: STORE.lastTweet,
         };
-        console.log(options);
+        // console.log(options);
 
         let queryString = createQueryString(options);
 
@@ -65,7 +65,7 @@ $(document).ready(function () {
             })
             .then(responseJson => {
                 STORE.lastTranslatedTweet1 = responseJson.contents.translated;
-                console.log(STORE.lastTranslatedTweet1);
+                // console.log(STORE.lastTranslatedTweet1);
                 translateChinese(translateLang);
             })
             .catch(err => {
