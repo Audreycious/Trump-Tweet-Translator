@@ -79,7 +79,7 @@ select {
 
 option {
     color: black;
-    font-size: 4vmin;
+    font-size: 2vmin;
 }
 
 section {
@@ -172,7 +172,17 @@ a:focus {
     margin-top: 1%;
 }
 
-
+@supports (-ms-ime-align: auto) {
+    @media only screen and (min-width: 1000px) {
+        footer {
+            justify-content: center;
+        }
+        
+        footer a {
+            padding: 0 7%;
+        }
+    }
+}
 
 @media only screen and (min-width: 420px) {
     #home-page p {
@@ -202,10 +212,6 @@ a:focus {
 
     section {
         max-width: 1000px;
-    }
- 
-    footer {
-        justify-content: space-evenly;
     }
 
     #home-page p {
