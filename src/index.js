@@ -29,7 +29,6 @@ $(document).ready(function () {
                 throw new Error(response.statusText);
             })
             .then(responseJson => {
-                // console.log(responseJson);
                 STORE.lastTweet = responseJson.message;
                 $('#trump-tweet-container').html(responseJson.message);
             })
@@ -41,21 +40,14 @@ $(document).ready(function () {
     // Translate tweets
     function translateYoda() {
         const yodaBaseUrl = STORE.yodaBaseUrl;
-
         let translateLang = $("select option:checked").val();
-        // console.log(translateLang);
         translateLang = translateLang.toString();
-        
         let options = {
             text: STORE.lastTweet,
         };
-        // console.log(options);
-
         let queryString = createQueryString(options);
-
         let yodaSendUrl = yodaBaseUrl + "?" + queryString;
-        // console.log(queryString);
-        // console.log(translateSendUrl);
+
         fetch(yodaSendUrl)
             .then(response => {
                 if (response.ok) {
@@ -65,7 +57,6 @@ $(document).ready(function () {
             })
             .then(responseJson => {
                 STORE.lastTranslatedTweet1 = responseJson.contents.translated;
-                // console.log(STORE.lastTranslatedTweet1);
                 translateChinese(translateLang);
             })
             .catch(err => {
@@ -80,12 +71,9 @@ $(document).ready(function () {
             q: translateTemp,
             langpair: "en|zh"
         };
-
         let queryString = createQueryString(options);
-
         let translateSendUrl = translateBaseUrl + "?" + queryString;
-        // console.log(queryString);
-        // console.log(translateSendUrl);
+
         fetch(translateSendUrl)
             .then(response => {
                 if (response.ok) {
@@ -95,7 +83,6 @@ $(document).ready(function () {
             })
             .then(responseJson => {
                 STORE.lastTranslatedTweet2 = responseJson.responseData.translatedText;
-                // console.log(STORE.lastTranslatedTweet2);
                 translateLanguage(translateLang);
             })
             .catch(err => {
@@ -110,12 +97,9 @@ $(document).ready(function () {
             q: translateTemp,
             langpair: "zh|" + translateLang
         };
-
         let queryString = createQueryString(options);
-
         let translateSendUrl = translateBaseUrl + "?" + queryString;
-        // console.log(queryString);
-        // console.log(translateSendUrl);
+
         fetch(translateSendUrl)
             .then(response => {
                 if (response.ok) {
@@ -125,7 +109,6 @@ $(document).ready(function () {
             })
             .then(responseJson => {
                 STORE.lastTranslatedTweet3 = responseJson.responseData.translatedText;
-                // console.log(STORE.lastTranslatedTweet2);
                 translateEnglish(translateLang);
             })
             .catch(err => {
@@ -140,12 +123,9 @@ $(document).ready(function () {
             q: translateTemp,
             langpair: translateLang + "|en"
         };
-
         let queryString = createQueryString(options);
-
         let translateSendUrl = translateBaseUrl + "?" + queryString;
-        // console.log(queryString);
-        // console.log(translateSendUrl);
+
         fetch(translateSendUrl)
             .then(response => {
                 if (response.ok) {
@@ -155,7 +135,6 @@ $(document).ready(function () {
             })
             .then(responseJson => {
                 STORE.finalTranslatedTweet = responseJson.responseData.translatedText;
-                // console.log(STORE.finalTranslatedTweet);
                 $('#translated-tweet-container').html(STORE.finalTranslatedTweet);
             })
             .catch(err => {
