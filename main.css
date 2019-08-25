@@ -217,4 +217,12 @@ a:focus {
     #home-page p {
         font-size: 3.5vmin;
     }
+
+    footer {
+        justify-content: center;
+    }
+    
+    footer a {
+        padding: 0 7%;
+    }
 }
